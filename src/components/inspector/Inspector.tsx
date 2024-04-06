@@ -1,10 +1,10 @@
 import { type ReactElement, useMemo } from "react";
 import { useGridStore } from "../../data/stores/gridStore.ts";
 import { positionToId } from "../../utils/misc.ts";
+import { FloorAdder } from "../floor-adder/FloorAdder.tsx";
 
 export function Inspector(): ReactElement {
   const selectedPosition = useGridStore((state) => state.selectedPosition);
-
   const floors = useGridStore((state) => state.floors);
   const floorForSelectedPosition = useMemo(() => {
     if (!selectedPosition) {
@@ -22,6 +22,9 @@ export function Inspector(): ReactElement {
           </h3>
           <h4>Floor</h4>
           {floorForSelectedPosition ? floorForSelectedPosition.type : "Empty"}
+          <div>
+            <FloorAdder position={selectedPosition} />
+          </div>
         </>
       )}
     </div>
