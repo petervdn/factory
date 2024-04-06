@@ -7,7 +7,7 @@ function App(): ReactElement {
   return (
     <>
       <h1>Factory</h1>
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div style={{ display: "flex" }}>
         <Grid />
         <Inspector />
       </div>

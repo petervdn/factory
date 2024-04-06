@@ -1,4 +1,4 @@
-import { type ReactElement, useCallback } from "react";
+import { type ReactElement, useCallback, type ChangeEvent } from "react";
 
 type Props = {
   value: string;
@@ -12,7 +12,7 @@ export function Select({
   options,
 }: Props): ReactElement {
   const onChange = useCallback(
-    (event: React.ChangeEvent<HTMLSelectElement>) => {
+    (event: ChangeEvent<HTMLSelectElement>) => {
       propsOnChange(event.target.value);
     },
     [propsOnChange],

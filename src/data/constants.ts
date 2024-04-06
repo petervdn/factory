@@ -1,6 +1,6 @@
 import { type BlockType, type FloorType, type Size } from "./types.ts";
 
-export const gridSize = { width: 15, height: 15 };
+export const gridSize = { width: 10, height: 10 };
 export const gridCellSize = 50;
 export const gridCellPadding = 10;
 

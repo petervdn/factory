@@ -35,7 +35,7 @@ export function FloorAdder({ position }: Props): ReactElement {
   return (
     <>
       <button type="button" onClick={onAddClick}>
-        Add
+        Set floor:
       </button>
       <Select
         value={selectedFloorType}
